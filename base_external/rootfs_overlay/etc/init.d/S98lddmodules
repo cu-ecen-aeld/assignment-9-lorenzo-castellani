@@ -4,12 +4,14 @@ case "$1" in
 		echo "Load modules"
 		/etc/init.d/scull_load
 		/etc/init.d/module_load faulty
+		/etc/init.d/aesdchar_load
 		modprobe hello
 		;;
 	stop)
 		echo "Unload module"
 		/etc/init.d/scull_unload
 		/etc/init.d/module_unload faulty
+		/etc/init.d/aesdchar_unload
 		rmmod hello
 		;;
 	*)
